@@ -6,61 +6,105 @@
   <title>Beesknees Bar</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #faf3e3;
-      margin: 0;
+      background: #000;
+      min-height: 100vh;
       text-align: center;
+      color: #FFD700;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .main-content {
+      position: relative;
+      z-index: 2;
     }
     .logo {
       margin-top: 40px;
       width: 220px;
       max-width: 90vw;
       height: auto;
+      filter: drop-shadow(0 0 30px #FFD70080);
+    }
+    h1, h2 {
+      color: #FFD700;
+      text-shadow: 0 2px 10px #FFD70044;
+      letter-spacing: 0.08em;
+    }
+    .card {
+      background: #111;
+      border-radius: 12px;
+      border: 2px solid #FFD700cc;
+      box-shadow: 0 2px 24px #FFD70044;
+      padding: 20px 36px;
+      margin-bottom: 20px;
+      display: inline-block;
+      color: #FFD700;
     }
     .categories {
       margin-top: 40px;
-      display: inline-block;
       text-align: left;
+    }
+    .categories ul {
+      list-style: disc inside;
+      margin: 0;
+      padding-left: 0;
+    }
+    .categories li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
     }
     .location {
       margin-top: 30px;
       font-size: 1.2em;
-      color: #333;
     }
-    .card {
-      background: #fff9e1;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px #ffe49670;
-      padding: 16px 32px;
-      margin-bottom: 18px;
+    a, a:visited {
+      color: #FFD700;
+      text-decoration: underline;
     }
-    h1, h2 {
-      color: #d18b2c;
+    a:hover {
+      color: #bfa047;
     }
   </style>
 </head>
 <body>
-  <img src="assets/logo.png" alt="Beesknees Logo" class="logo"/>
-  <h1>Welcome to Beesknees Bar</h1>
-  <div class="categories card">
-    <h2>Our Categories</h2>
-    <ul>
-      <li>Cocktail Menu – Signature & classic drinks</li>
-      <li>News / Announcements – Updates, events, specials</li>
-      <li>Gallery – Photos from Bee’s Knees</li>
-      <li>Blog / Stories / Culture – Articles, stories, inspiration</li>
-      <li>About / Philosophy / Story – Who we are & our concept</li>
-      <li>Events / Experience – Private events, special nights</li>
-      <li>Visit Us & Contact – Location, hours, ways to reach us</li>
-    </ul>
-  </div>
-  <div class="location card">
-    <strong>Location:</strong><br>
-    Bee's Knees the Bar, Rizospaston 8<br>
-    Argostoli<br>
-    Cephalonia<br>
-    Greece
+  <video class="video-bg" src="assets/gold-snow.mp4" autoplay loop muted playsinline></video>
+  <div class="main-content">
+    <img src="assets/logo.png" alt="Beesknees Logo" class="logo"/>
+    <h1>Welcome to Beesknees Bar</h1>
+    <div class="categories card">
+      <h2>Our Categories</h2>
+      <ul>
+        <li>Cocktail Menu – Signature & classic drinks</li>
+        <li>News / Announcements – Updates, events, specials</li>
+        <li>Gallery – Photos from Bee’s Knees</li>
+        <li>Blog / Stories / Culture – Articles, stories, inspiration</li>
+        <li>About / Philosophy / Story – Who we are & our concept</li>
+        <li>Events / Experience – Private events, special nights</li>
+        <li>Visit Us & Contact – Location, hours, ways to reach us</li>
+      </ul>
+    </div>
+    <div class="location card">
+      <strong>Location:</strong><br>
+      Bee's Knees the Bar, Rizospaston 8<br>
+      Argostoli<br>
+      Cephalonia<br>
+      Greece
+    </div>
   </div>
 </body>
 </html>
